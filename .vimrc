@@ -1,9 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-set nu
-syntax on 
+set  nu rnu
+syntax on
 set noerrorbells
-set tabstop=4 softtabstop=4 
+set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
@@ -13,7 +13,7 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-set incsearch 
+set incsearch
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,7 +24,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
-
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -42,10 +43,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'preservim/nerdtree'
+Plugin 'jelera/vim-javascript-syntax'
+
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+ call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
 " Brief help
@@ -59,4 +61,3 @@ filetype plugin indent on    " required
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
 map <C-n> :NERDTreeToggle<CR>
-
